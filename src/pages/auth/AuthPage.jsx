@@ -15,12 +15,14 @@ export const AuthPage = () => {
   }
 
   return (
-    <div className="auth-container">
-      {isLogin ? (
-        <Login switchAuthHandler={handleAuthPageToggle}/>
-      ) : (
-        <Register switchAuthHandler={handleAuthPageToggle}/>
-      )}
+    <div className="background">
+      <div className="auth-container">
+        {isLogin ? (
+          <Login switchAuthHandler={handleAuthPageToggle}/>
+        ) : (
+          <Register switchAuthHandler={handleAuthPageToggle}/>
+        )}
+      </div>
     </div>
   )
 }
