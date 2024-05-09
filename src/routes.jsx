@@ -1,8 +1,11 @@
 import {AuthPage} from './pages/auth';
 
+import {MainPage} from './pages/mainPage';
+
 const routes = [
 
-    {path: '/*', element: <AuthPage/>}
+    {path: '/auth', element: <AuthPage/>},
+    {path: '/*', element: <MainPage/>}
 
 ]
 
