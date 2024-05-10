@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { Navbar } from "../../componets/navbar/Navbar";
+
+import { useUserDetails } from "../../shared/hooks/useUserDetails";
 
 import './mainPage.css';
 
 export const MainPage = () => {
 
+  const { isLogged } = useUserDetails();
+
   return (
-    <h1>Hello!</h1>
-  )
-}
+    <div className="dashboard-container">
+      <Navbar />
+    </div>
+  );
+};
