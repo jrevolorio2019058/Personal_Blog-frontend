@@ -16,6 +16,11 @@ export const useRegister = () => {
         
         setIsLoading(true);
 
+        console.log(name);
+        console.log(username);
+        console.log(password);
+        console.log(email);
+
         const response = await registerRequest({
 
             name,
@@ -41,7 +46,7 @@ export const useRegister = () => {
         
         localStorage.setItem('user', JSON.stringify(userDetails))
 
-        navigate('/auth')
+        navigate('/')
 
     }
 
