@@ -19,13 +19,13 @@ export const useRegister = () => {
         const response = await registerRequest({
 
             name,
-            email,
+            username,
             password,
-            username
+            email
 
         });
 
-        setIsLoading(false)
+        setIsLoading(false);
 
         if (response.error) {
             

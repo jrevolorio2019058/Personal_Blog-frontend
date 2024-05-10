@@ -2,7 +2,7 @@ export const validateUsername = (username) => {
     
     const regex = /^\S{3,8}$/
 
-    return regex.text(username)
+    return regex.test(username);
 
 }
 

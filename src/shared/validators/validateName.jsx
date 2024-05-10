@@ -6,4 +6,4 @@ export const validateName = (name) => {
 
 }
 
-export const validateNameMessage = 'The name needs 3 to 8 characters without space'
+export const validateNameMessage = 'The name needs 3 to 6 characters without space'

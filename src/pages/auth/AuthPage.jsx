@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import { Login } from "../../componets/Login";
 
+import { Register } from '../../componets/Register';
+
 import './authPage.css';
 
 export const AuthPage = () => {
