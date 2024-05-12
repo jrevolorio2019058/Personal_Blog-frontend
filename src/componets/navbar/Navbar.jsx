@@ -16,7 +16,7 @@ export const Navbar = () => {
 
   const navigate = useNavigate();
 
-  var saved = localStorage.getItem("user");
+  var save = localStorage.getItem("user");
 
   const handleNavigateToAuthPage = () => {
     navigate('/auth')
@@ -32,15 +32,13 @@ export const Navbar = () => {
 
   return (
     <div className="nav-container">
-      <div className="nav-buttons-container">
-        {saved == null? (
-          <NavButton text="Login" onClickHandler={handleNavigateToAuthPage} />
-        ) : (
-          <div>
-            <NavButton text="Logout" onClickHandler={handleLogout} />
-          </div>
-        )}
-      </div>
+      {save == null? (
+        <NavButton text="Login" onClickHandler={handleNavigateToAuthPage} />
+      ) : (
+        <div>
+          <NavButton text="Logout" onClickHandler={handleLogout} />
+        </div>
+      )}
     </div>
   );
 };
