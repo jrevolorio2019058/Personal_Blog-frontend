@@ -6,7 +6,7 @@ export const MainPage = () => {
 
   return (
     <div className="dashboard-container">
-      <Navbar />
+      <Navbar/>
     </div>
   );
 };

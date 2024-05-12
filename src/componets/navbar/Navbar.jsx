@@ -32,6 +32,9 @@ export const Navbar = () => {
 
   return (
     <div className="nav-container">
+      <div className="img-Kinal">
+        <img src="/../../assets/img/logoKinal2.png"/> 
+      </div>
       {save == null? (
         <NavButton text="Login" onClickHandler={handleNavigateToAuthPage} />
       ) : (

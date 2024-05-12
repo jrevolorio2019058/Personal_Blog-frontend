@@ -1,3 +1,9 @@
+body{
+
+    background-image: linear-gradient(to right top, #3b1346, #391a53, #352260, #2b2a6d, #15327a);
+
+}
+
 .dashboard-container {
     width: 100%;
     height: 100vh;
@@ -6,7 +12,7 @@
 .nav-container {
     position: absolute;
     width: 100%;
-    height: 50px;
+    height: 60px;
     background-color:  #3b1346;
     border-bottom: 2px solid rgba(20, 0, 30, 0.7);
     box-shadow: 0 0 5px 0 rgba(33, 11, 46, 0.3);
@@ -17,7 +23,7 @@
 }
 
 .nav-button {
-    font-size: 18px;
+    font-size: 25px;
     margin-left: auto;
     margin-right: 25px;
     color: rgba(255, 255, 255, 0.9);
@@ -28,4 +34,8 @@
 
     color:  #2449b6
 
+}
+
+.nav-button:active{
+    color: #ff0000;
 }
