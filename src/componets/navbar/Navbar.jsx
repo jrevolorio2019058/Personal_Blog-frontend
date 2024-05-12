@@ -1,7 +1,5 @@
 import { useNavigate } from "react-router-dom";
 
-import { useUserDetails } from '../../shared/hooks';
-
 const NavButton = ({text, onClickHandler}) => {
     
     return (
@@ -15,22 +13,27 @@ const NavButton = ({text, onClickHandler}) => {
 }
 
 export const Navbar = () => {
-  const { isLogged, logout } = useUserDetails();
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
+  var saved = localStorage.getItem("user");
 
   const handleNavigateToAuthPage = () => {
-    navigate('/')
+    navigate('/auth')
   }
 
   const handleLogout = () => {
-    logout()
+    
+    localStorage.removeItem('user');
+    saved = null;
+    window.location.href = './'
+
   }
 
   return (
     <div className="nav-container">
       <div className="nav-buttons-container">
-        {!isLogged ? (
+        {saved == null? (
           <NavButton text="Login" onClickHandler={handleNavigateToAuthPage} />
         ) : (
           <div>
