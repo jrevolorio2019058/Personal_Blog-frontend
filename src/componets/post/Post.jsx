@@ -1,14 +1,30 @@
-import { listPost as listPostRequest} from "../../services";
+import { listPost as listPostRequest } from "../../services";
 
 import { useEffect } from "react";
+
+import { useNavigate } from "react-router-dom";
 
 import { useState } from "react";
 
 import toast from "react-hot-toast";
 
+const AddCommentButton = ({text, onClickHandler}) => {
+    
+    return (
+        
+        <span className="nav-button" onClick={onClickHandler}>
+            {text}
+        </span>
+
+    )
+
+}
+
 export const Post = () => {
 
     const [post, setPost] = useState([]);
+
+    const navigate = useNavigate();
 
     const [isLoading, setIsLoading] = useState(false);
 
@@ -44,6 +60,12 @@ export const Post = () => {
         listPost();
 
     }, []);
+
+    const handleNavigateToCommentPage = () => {
+
+        navigate('./comment')
+        
+    }
 
     return (
 
@@ -86,6 +108,10 @@ export const Post = () => {
                                                 </div>
                                             )}
 
+                                        </div>
+
+                                        <div>
+                                            <AddCommentButton text="Add Comment" onClickHandler={handleNavigateToCommentPage} />
                                         </div>
 
                                     </div>
