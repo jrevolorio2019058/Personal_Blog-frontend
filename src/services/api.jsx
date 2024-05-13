@@ -65,3 +65,20 @@ export const register = async (data) => {
     }
 
 }
+
+export const listPost = async (data) => {
+    
+    try {
+        
+        return await apiClient.get('/post', data)
+
+    } catch (e) {
+        
+        return {
+            error: true,
+            e
+        }
+
+    }
+
+}

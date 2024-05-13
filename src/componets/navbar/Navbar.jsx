@@ -25,16 +25,13 @@ export const Navbar = () => {
   const handleLogout = () => {
     
     localStorage.removeItem('user');
-    saved = null;
-    window.location.href = './'
+    save = null;
+    navigate('./')
 
   }
 
   return (
     <div className="nav-container">
-      <div className="img-Kinal">
-        <img src="/../../assets/img/logoKinal2.png"/> 
-      </div>
       {save == null? (
         <NavButton text="Login" onClickHandler={handleNavigateToAuthPage} />
       ) : (
