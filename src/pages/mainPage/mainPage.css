@@ -4,9 +4,109 @@ body{
 
 }
 
-.dashboard-container {
-    width: 100%;
+.dashboard-container{
+
+    margin-bottom:vh;
+
+}
+
+.full-page{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
+
+}
+
+.content{
+
+    background-color: transparent;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    margin: 10vh;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.dirrection{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.cards{
+
+    background-color: #f5f5f5;
+    border-radius: 20px;
+
+}
+
+.tittle{
+
+    color: #15327a;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.link-container{
+
+    text-align: center;
+
+}
+
+.link{
+
+    height: 10vh;
+    width: 10vh;
+    margin: 20px;
+
+}
+
+.image{
+
+    overflow: hidden;
+    margin-bottom: 10px;
+
+}
+
+.image img{
+
+    border-radius: 10px;
+    width: 15vh;
+    height: 15vh;
+    object-fit: cover;
+
+}
+
+.creator{
+
+    color: #ff5252;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+
+
+}
+
+.description{
+
+    color: #555555;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin: 15px;
+
 }
 
 .nav-container {
@@ -38,34 +138,4 @@ body{
 
 .nav-button:active{
     color: #ff0000;
-}
-
-.post-image-container {
-    height: 200px;
-}
-
-.post-card {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.post-card:hover {
-    transform: scale(1.1);
-}
-
-.post-card-title {
-    font-size: 22px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    color: #0e0e10;
-}
-
-.post-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 10px; 
-    width: 100%;
 }
