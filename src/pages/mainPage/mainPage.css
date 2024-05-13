@@ -72,7 +72,7 @@ body{
 .link{
 
     height: 10vh;
-    width: 10vh;
+    width: 20vh;
     margin: 20px;
 
 }
@@ -230,5 +230,11 @@ body{
 .user{
 
     color:crimson;
+
+}
+
+.add-comment{
+
+    background-color:#2449b6;
 
 }

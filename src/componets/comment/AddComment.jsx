@@ -90,7 +90,7 @@ export const AddComment = () =>{
               onChangeHandler={handleInputValueChange}
               type="text"
             />
-            <button onClick={handleAddComment} disabled={isSubmitButtonDisabled}>
+            <button className='add-comment' onClick={handleAddComment} disabled={isSubmitButtonDisabled}>
               AddComment
             </button>
           </form>

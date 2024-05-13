@@ -1,6 +1,6 @@
-import { useNavigate } from "react-router-dom";
-import { login as loginRequest } from '../../services'
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import { login as loginRequest } from '../../services';
 
 export const useLogin = () => {
 
@@ -18,7 +18,14 @@ export const useLogin = () => {
             return toast.error(response.e?.response?.data || 'An error ocurred while logging in, please try again')
         }
 
-        const { userDetails } = response.data
+        console.log(response.data);
+
+        /*recordatorio: el userDetails si en el backEnd se necesita desestructurar por llaves si viene solo
+        como un objeto llamar al objteto normal*/
+
+        const  userDetails  = response.data
+
+        console.log(userDetails);
 
         localStorage.setItem('user', JSON.stringify(userDetails))
 

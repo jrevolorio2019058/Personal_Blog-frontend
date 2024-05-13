@@ -40,8 +40,6 @@ export const Post = () => {
 
         }catch (error) {
 
-            console.log(error);
-
             return toast.error(
                 post.e?.response?.data || "Can't Read the posts"
             )
@@ -98,19 +96,19 @@ export const Post = () => {
                                             {Array.isArray(post.proyectLink)? (
                                                 post.proyectLink.map((link, index) => (
                                                     <a key={index} href={link} target="_blank" rel="noopener noreferrer">
-                                                        <img className="link" src='https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png' />
+                                                        <img className="link" src='https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png' />
                                                     </a>
                                                 ))
                                             ) : (
                                                 
                                                 <div className="link">
-                                                    <img className="link" src='https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png' alt={post.proyectLink}></img>
+                                                    <img className="link" src='https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png' alt={post.proyectLink}></img>
                                                 </div>
                                             )}
 
                                         </div>
 
-                                        <div>
+                                        <div className="add-comment">
                                             <AddCommentButton text="Add Comment" onClickHandler={handleNavigateToCommentPage} />
                                         </div>
 

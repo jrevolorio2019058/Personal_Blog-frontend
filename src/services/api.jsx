@@ -20,6 +20,8 @@ apiClient.interceptors.request.use(
 
         }
 
+        console.log(userDetails)
+
         return config
 
     },
