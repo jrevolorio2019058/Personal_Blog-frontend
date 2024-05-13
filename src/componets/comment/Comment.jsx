@@ -1,4 +1,4 @@
-import { listComment as listCommentRequest} from "../../services";
+import { listComment as listCommentRequest } from "../../services";
 
 import { useEffect } from "react";
 
@@ -53,7 +53,7 @@ export const Comment = () => {
                 ):(
                     <div className="form-content">
 
-                        <h2 className="tittle-comments">Comentarios</h2>
+                        <h2 className="tittle-comments">Comments</h2>
 
                         <h4 className="lines">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h4>
 
@@ -65,9 +65,9 @@ export const Comment = () => {
 
                                         <h4 className="title">{comment.titleComment}</h4>
                                         <h4 className="description-comment">- {comment.descriptionComment}</h4>
-                                        <h4 className="user">Usuario: {comment.creatorComment}</h4>
-                                        <h4 className="proyect">Proyecto: {comment.postName}</h4>
-                                        <h4 className="lines">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h4>
+                                        <h4 className="user">User: {comment.creatorComment}</h4>
+                                        <h4 className="proyect">Proyect: {comment.postName}</h4>
+                                        <h4 className="lines"> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h4>
 
                                     </div>
 
