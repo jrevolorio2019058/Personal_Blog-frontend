@@ -99,3 +99,20 @@ export const listComment = async (data) => {
     }
 
 }
+
+export const addComment = async (data) => {
+    
+    try {
+        
+        return await apiClient.post('/comment', data)
+
+    } catch (e) {
+        
+        return {
+            error: true,
+            e
+        }
+
+    }
+
+}

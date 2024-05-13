@@ -6,13 +6,29 @@ import { useState } from "react";
 
 import toast from "react-hot-toast";
 
+import { useNavigate } from "react-router-dom";
+
 export const Comment = () => {
+
+    const NavButton = ({text, onClickHandler}) => {
+    
+        return (
+            
+            <span className="nav-button" onClick={onClickHandler}>
+                {text}
+            </span>
+    
+        )
+    
+    }
 
     const [comment, setComment] = useState([]);
 
     const [isLoading, setIsLoading] = useState(false);
 
     const listComment = async () =>{
+
+        const navigate = useNavigate();
 
         setIsLoading(true);
 
@@ -45,6 +61,10 @@ export const Comment = () => {
 
     }, []);
 
+    const handleNavigateToCommentPage = () => {
+        navigate('/comment')
+      }
+
     return (
 
             <div className="content-form">
@@ -54,6 +74,8 @@ export const Comment = () => {
                     <div className="form-content">
 
                         <h2 className="tittle-comments">Comentarios</h2>
+
+                        <NavButton text="Add Comment" onClickHandler={handleNavigateToCommentPage} />
 
                         <h4 className="lines">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h4>
 
