@@ -82,3 +82,20 @@ export const listPost = async (data) => {
     }
 
 }
+
+export const listComment = async (data) => {
+    
+    try {
+        
+        return await apiClient.get('/comment', data)
+
+    } catch (e) {
+        
+        return {
+            error: true,
+            e
+        }
+
+    }
+
+}

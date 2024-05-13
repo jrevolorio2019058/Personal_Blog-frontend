@@ -1,4 +1,4 @@
-import { listPost, listPost as listPostRequest} from "../../services";
+import { listPost as listPostRequest} from "../../services";
 
 import { useEffect } from "react";
 
@@ -12,12 +12,6 @@ export const Post = () => {
 
     const [isLoading, setIsLoading] = useState(false);
 
-    useEffect(() =>{
-
-        listPost();
-
-    }, []);
-
     const listPost = async () =>{
 
         setIsLoading(true);
@@ -25,11 +19,15 @@ export const Post = () => {
         try{
 
             const response = await listPostRequest();
+            console.log(response.data);
             setPost(response.data.post);
 
         }catch (error) {
+
+            console.log(error);
+
             return toast.error(
-                postData.e?.response?.data || "Can't Read the posts"
+                post.e?.response?.data || "Can't Read the posts"
             )
         } finally {
 
@@ -37,7 +35,15 @@ export const Post = () => {
 
         }
 
+        console.log(post);
+
     }
+
+    useEffect(() =>{
+
+        listPost();
+
+    }, []);
 
     return (
 
@@ -67,7 +73,7 @@ export const Post = () => {
 
                                         <div className="link-container">
 
-                                            {Array.isArray(post.proyectLink) && post.proyectLink.length > 1? (
+                                            {Array.isArray(post.proyectLink)? (
                                                 post.proyectLink.map((link, index) => (
                                                     <a key={index} href={link} target="_blank" rel="noopener noreferrer">
                                                         <img className="link" src='https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png' />
@@ -76,7 +82,7 @@ export const Post = () => {
                                             ) : (
                                                 
                                                 <div className="link">
-                                                    <img src='https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png' alt={post.proyectLink}></img>
+                                                    <img className="link" src='https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png' alt={post.proyectLink}></img>
                                                 </div>
                                             )}
 
@@ -87,7 +93,7 @@ export const Post = () => {
                                 </div>
 
                             ))
-                        )    : (
+                        )  : (
 
                             <h5>NOT FOUND DATA, Sorry</h5>
 

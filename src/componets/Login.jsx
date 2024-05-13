@@ -10,7 +10,7 @@ import {
 import { useLogin } from "../shared/hooks";
 
 export const Login = ({ switchAuthHandler }) => {
-  const {login, isLoading} = useLogin();
+  const {login} = useLogin();
 
   const [formState, setFormState] = useState({
     usernameOrEmail: {
@@ -62,7 +62,7 @@ export const Login = ({ switchAuthHandler }) => {
     login(formState.usernameOrEmail.value, formState.password.value)
   }
 
-  const isSubmitButtonDisabled = isLoading || !formState.password.isValid || !formState.usernameOrEmail.isValid
+  const isSubmitButtonDisabled =  !formState.password.isValid || !formState.usernameOrEmail.isValid
   return (
     <div className="login-container">
         <form className="auth-form">
