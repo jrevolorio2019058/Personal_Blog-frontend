@@ -2,7 +2,7 @@ import axios from "axios";
 
 const apiClient = axios.create({
 
-    baseURL: 'http://127.0.0.1:3002/personal-blog/v1',
+    baseURL: 'http://192.168.31.103:3002/personal-blog/v1',
     timeout: 1000
     
 })
