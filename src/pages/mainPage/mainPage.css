@@ -30,7 +30,9 @@ body{
     width: auto;
     overflow: hidden;
     display: flex;
-    margin: 10vh;
+    margin: 2vh;
+    margin-left: 20vh;
+    margin-top: 100vh;
     border-radius: 10px;
     text-align: center;
     justify-content: center;
@@ -185,7 +187,7 @@ body{
     width: auto;
     overflow: hidden;
     display: flex;
-    margin: 10vh auto;
+    margin: 100vh auto;
     border-radius: 10px;
     text-align: center;
     justify-content: center;
